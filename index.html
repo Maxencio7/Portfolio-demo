@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <section class="hero">
+        <div class="overlay">
+            <div class="hero-content">
+        <h1>Hello, I'm Maxencio</h1>
+        <p>
+            Web & App Designer | CLSBB | Aspiring DevSecOps + Ai
+        </p>
+        <a href="projects.html" class="cta-button">See My Work</a>
+    </div>
+    </div>
+    </section>
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./images/image.jpeg" alt="startup">
+                   
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./images/port.png" alt="Portfolio">
+                      
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./images/ecom.jpg" alt="Portfolio">
+                         
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text"> 
+                <p>
+                    I'm a self-driven web/app designer and aspiring DevSecOps engineer, 
+                    constantly exploring new creative angles and smarter solutions.
+                    With a strong background in Lean Six Sigma, cybersecurity and a deep love for clean,
+                    efficient design, I bring structure to style.
+
+                </p>
+                <p>
+                    Through my journey's just beginning, I'm passionate about
+                    building modern, responsive websites/apps that look amazing 
+                    and feel intuitive. I'm hands-on with HTML, CSS, Javascript, React, Flutter etc. 
+                    Every project is a chance to create something
+                    that feels alive.
+                </p>
+                <p>
+                    I'm here to work, grow, and make something dope. Let's create something
+                    that stands out.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-box">
+            <p>Got a Project or just 
+                wanna say hey? I'm all ears.</p>
+                <form id="contact-form"  class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required/>
+                    <input type="text" name="email" placeholder="Your Email" required/>
+                    <textarea name="message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                      <p>✅ Message sent successfully!</p>
+                      <button onclick="closePopup()">OK</button>
+                    </div>
+                  </div>
+        </div>
+    </section>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("PaEC-06vRKzg3a8_3");
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_2s5qe8m", "template_nxbjdln", this)
+    .then(function() {
+        document.getElementById("popup").style.display = "block";
+      // Reset form
+      document.getElementById("contact-form").reset();
+    }, function(error) {
+      console.error("FAILED...", error);
+      alert("Failed to send message.");
+    });
+});
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</html>
