@@ -1,5 +1,6 @@
 html {
   scroll-bahavior: smooth;
+  background: black;
 }
 * {
   margin: 0;
@@ -18,7 +19,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("prof.jpeg") no-repeat center center/cover;
+  background: url("images/prof.jpeg") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,53 +70,73 @@ body {
     font-size: 1.2rem;
   }
 }
-body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
-    .button {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-    .form-section {
-      margin-top: 30px;
-    }
-    label, input, textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+}
+h1 {
+  text-align: center;
+}
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+.container button{
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.container button:hover {
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+.button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.button:hover {
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+.form-section {
+  margin-top: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #1f1f1f;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+  transform: perspective(800px) rotationX(0deg) rotationY(0deg);
+  transition: transform 0.6s ease;
+}
+.form-section:hover {
+  transform: perspective(800px) rotationX(2deg) rotationY(2deg);
+  box-shadow: 0 20px 40px rgba(0, 210, 255, 0.3);
+}
+label, input, textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 .project {
   padding: 100px 20px;
@@ -139,7 +160,7 @@ body {
 .project-card {
   background: #1f1f1f;
   border-radius: 16px;
-  width: 320px;
+  width: 500px;
   padding: 30px;
   box-shadow: 0 10px 25px rgba(0, 210, 255, 0.15);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -161,12 +182,14 @@ body {
 }
 .project-image {
   height: 150px;
+  width:350px;
   background: linear-gradient(135deg, #00d2ff, #3a7bd5);
   border-radius: 8px;
   margin-bottom: 15px;
 }
 .project-image img {
   height: 180px;
+  width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
 }
